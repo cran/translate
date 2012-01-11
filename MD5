@@ -1,0 +1,11 @@
+58089e89b49898d4d2c3e92fa1438812 *DESCRIPTION
+a9cd22a3bb7e3131a868da4b41d54ee0 *NAMESPACE
+1e1e14435fc089602b63ba7e6deee6ec *R/translate.R
+8779e19e40a287ba9f76b2cb67c8d2a2 *man/detect.source.Rd
+d8288763deea1a6796128310fdde2d8f *man/get.key.Rd
+9021aa38fa36452d61695983184a0740 *man/google.url.Rd
+7cc4f37d1e7c2063ec2374d4dd6973e1 *man/languages.Rd
+b745b674abcca4ca25b70d1d334ab334 *man/set.key.Rd
+001322317e4d0296722173ab07993498 *man/translate-package.Rd
+dd6470f548925d78c296cd9b75df6ecd *man/translate.Rd
+00f3592557b72c808e2d06c0e882118d *tests/tests.R

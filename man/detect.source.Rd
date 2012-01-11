@@ -1,0 +1,18 @@
+\name{detect.source}
+\alias{detect.source}
+\title{Detect the source of a text.}
+\usage{
+  detect.source(query, key = get.key())
+}
+\arguments{
+  \item{query}{The text to invoke against}
+
+  \item{key}{The API key}
+}
+\value{
+  A list of potential source languages
+}
+\description{
+  Detect the source of a text.
+}
+
