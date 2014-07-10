@@ -2,9 +2,10 @@
 ##' @name translate-package
 ##' @docType package
 ##' @title translate
-##' @examples
-##' set.key('YOUR-API-KEY')
-##' translate('Hello, world!', 'en', 'de')
+##' @examples \dontrun{
+##'   set.key('YOUR-API-KEY')
+##'   translate('Hello, world!', 'en', 'de')
+##' }
 NULL
 
 ##' @import RCurl RJSONIO lisp functional
@@ -65,9 +66,9 @@ detect.source.url <- Curry(google.url, method='detect')
 ##' @return A list of potential source languages
 ##' @export
 detect.source <- function(query, key=get.key())
-  unlist(Map(function(detection) detection$language,
-             car(getJSON(detect.source.url(query=query,
-                                           key=key))$data$detections)))
+  Map(function(detection) detection$language,
+      car(getJSON(detect.source.url(query=query,
+                                    key=key))$data$detections))
 
 ##' URL for language mapping
 ##' @noRd
@@ -92,5 +93,5 @@ translate.url <- Curry(google.url, method=NULL)
 ##' @inheritParams google.url
 ##' @export
 translate <- function(query, source, target, key=get.key())
-  unlist(Map(as.vector,
-             getJSON(translate.url(query, source, target, key))$data$translations))
+  Map(as.vector,
+      getJSON(translate.url(query, source, target, key))$data$translations)
